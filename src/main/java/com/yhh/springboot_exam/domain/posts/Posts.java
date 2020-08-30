@@ -26,6 +26,7 @@ public class Posts {
 
     private String author;
 
+    // lombok 에서 제공하는 빌더 패턴을 만들어주는 어노테이션
     @Builder
     public Posts(String title, String content, String author){
         this.title = title;
