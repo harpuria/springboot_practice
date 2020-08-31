@@ -28,3 +28,4 @@
 + H2 Database는 1.4.197 버전을 권장합니다. [(참조 블로그)](https://slf4me.com/post/spring-boot/mybatis-h2-problem/ "참조 블로그")
 + H2 Console에서 JDBC URL은 실행될 때마다 변경이 됩니다. 이 URL 을 입력하고 연결해야 정상적으로 테이블확인이 가능합니다.
   + ex) H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:2a761096-0811-42a1-a556-9e85eca4c612'
+  + 혹은 application.properties에 spring.datasource.url의 값에 'jdbc:h2:mem:CUSTOM_URL_NAME' 을 입력한 뒤 이 URL 로 연결을 해주시면 됩니다.
