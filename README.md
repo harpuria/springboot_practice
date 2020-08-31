@@ -14,6 +14,7 @@
 + Spring Boot (2.3.3)
 + Maven (책은 Gradle로 되어있지만, 익숙한 Maven을 사용해보기로 하였습니다.)
 + IntelliJ Community
++ H2 Database (1.4.197)
 
 ***
 
