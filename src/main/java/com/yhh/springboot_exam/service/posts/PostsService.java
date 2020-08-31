@@ -1,6 +1,8 @@
 package com.yhh.springboot_exam.service.posts;
 
+import com.yhh.springboot_exam.domain.posts.Posts;
 import com.yhh.springboot_exam.domain.posts.PostsRepository;
+import com.yhh.springboot_exam.web.dto.PostsResponseDto;
 import com.yhh.springboot_exam.web.dto.PostsSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,5 +16,24 @@ public class PostsService {
     @Transactional
     public Long save(PostsSaveRequestDto requestDto){
         return postsRepository.save(requestDto.toEntity()).getId();
+    }
+
+    @Transactional
+    public Long update(Long id, PostsSaveRequestDto requestDto) {
+        Posts posts = postsRepository.findById(id)
+                        .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다 id=" + id));
+
+        // 쿼리를 날리지 않고도 Entity 클래스인 Posts 객체의 값을 바꿔주는것만으로도 update 가 이루어진다.
+        // 이를 JPA 의 영속성 컨텍스트라고 한다.
+        posts.update(requestDto.getTitle(), requestDto.getContent());
+
+        return id;
+    }
+
+    public PostsResponseDto findById(Long id) {
+        Posts entity = postsRepository.findById(id)
+                .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다 id=" + id));
+
+        return new PostsResponseDto(entity);
     }
 }
