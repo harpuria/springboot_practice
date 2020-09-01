@@ -1,18 +1,20 @@
 ## springboot_practice
 
-&nbsp;본 프로젝트는 공부 목적으로 스프링부트를 연습하는 프로젝트입니다.
+본 프로젝트는 공부 목적으로 스프링부트를 연습하는 프로젝트입니다.
 
 [목표]
-+ SpringBoot, JUnit4, JPA, Spring Security
-+ AWS EC2, S3, RDS, Travis CI 
++ 아래 제반 기술에 대한 기본적인 이해 및 실습
+    + SpringBoot, JUnit4, JPA, Spring Security, Mustache
+    + AWS EC2, S3, RDS, Travis CI 
 
 ***
 
 [개발 환경]
-+ JAVA 1.8 (Open JDK, Zulu)
++ JAVA (1.8, Zulu Open JDK)
 + Spring Boot (2.3.3)
-+ Maven (책은 Gradle로 되어있지만, 익숙한 Maven을 사용해보기로 하였습니다.)
-+ IntelliJ Community
++ Mustache (2.3.3)
++ Maven (3.6.3)
++ IntelliJ Community (2020.2.1)
 + H2 Database (1.4.197)
 
 ***

@@ -8,6 +8,7 @@ import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
@@ -55,6 +56,8 @@ public class PostsApiControllerTest {
         String url = "http://localhost:" + port + "/api/v1/posts";
 
         // when
+        // ResponseEntity<PK> 는 Restful API 에서 반환 타입으로 많이 사용된다.
+        // 해당 url 로 요청하였을 때 정상적으로 응답하는지 확인할 수 있다. 그리고 그 응답에 따라 별도의 처리도 할 수 있고..
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, requestDto, Long.class);
 
         // then
