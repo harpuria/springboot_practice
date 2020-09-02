@@ -4,6 +4,13 @@
     <div class="row">
         <div class="col-md-6">
             <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+            {{#userName}} <!-- userName 이 있다면.. /logout 은 스프링 시큐리티에서 기본적으로 제공하는 로그아웃 URL -->
+                Logged in as : <span id="user">{{userName}}</span>
+                <a href="/logout" class="btn btn-info active" role="button">Logout</a>
+            {{/userName}}
+            {{^userName}} <!-- userName 이 없다면.. /oauth2/authorization/google 역시 스프링 시큐리티에서 기본적으로 제공하는 구글 로그인 URL -->
+                <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+            {{/userName}}
         </div>
     </div>
     <br>
