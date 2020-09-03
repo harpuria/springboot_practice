@@ -1,5 +1,6 @@
 package com.yhh.springboot_exam.web;
 
+import com.yhh.springboot_exam.config.auth.LoginUser;
 import com.yhh.springboot_exam.config.auth.dto.SessionUser;
 import com.yhh.springboot_exam.service.posts.PostsService;
 import com.yhh.springboot_exam.web.dto.PostsResponseDto;
@@ -19,10 +20,11 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", poststService.findAllDesc());
 
-        SessionUser user = (SessionUser)httpSession.getAttribute("user");
+        // @LoginUser 를 만들었으므로 아래 코드는 불필요하다.
+        //SessionUser user = (SessionUser)httpSession.getAttribute("user");
 
         if(user != null){
             model.addAttribute("userName", user.getName());

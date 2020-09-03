@@ -22,7 +22,7 @@ public class IndexControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
         
         // then
-        assertThat(body).contains("스프링부트로 시작하는 웹서비스"); // 템플릿에 해당 문자열이 있는지 검증
+        assertThat(body).contains("스프링부트로 시작하는 웹 서비스"); // 템플릿에 해당 문자열이 있는지 검증
     }
 
 }
