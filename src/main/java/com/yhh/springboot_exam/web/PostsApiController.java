@@ -1,10 +1,13 @@
 package com.yhh.springboot_exam.web;
 
 import com.yhh.springboot_exam.service.posts.PostsService;
+import com.yhh.springboot_exam.web.dto.PostsListResponseDto;
 import com.yhh.springboot_exam.web.dto.PostsResponseDto;
 import com.yhh.springboot_exam.web.dto.PostsSaveRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -30,5 +33,11 @@ public class PostsApiController {
     public Long delete(@PathVariable Long id){
         postsService.delete(id);
         return id;
+    }
+
+    // 모든 리스트 가져오기 api (테스트 작성)
+    @GetMapping("/api/v1/posts/all")
+    public List<PostsListResponseDto> all(){
+        return postsService.findAllDesc();
     }
 }
