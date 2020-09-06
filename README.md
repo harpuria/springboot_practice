@@ -34,3 +34,4 @@
 + MediaType.APPLICATION_JSON_UTF8 은 5.2 이후부터 deprecated 되었습니다.
   + MediaType.APPLICATION_JSON 로 대체하시면 됩니다.
 + AWS 계정 가입 (프리티어 2021. 09. 03 까지)
+  + nuberus@naver.com / harpuria87@gmail.com (프리티어 종료)
