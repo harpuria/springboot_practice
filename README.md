@@ -35,3 +35,4 @@
   + MediaType.APPLICATION_JSON 로 대체하시면 됩니다.
 + AWS 계정 가입 (프리티어 2021. 09. 03 까지)
   + nuberus@naver.com / harpuria87@gmail.com (프리티어 종료)
++ p.309 application-real.properties 책과 다른 부분 [(이슈 확인)](https://github.com/jojoldu/freelec-springboot2-webservice/issues/158 "이슈 확인")

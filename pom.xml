@@ -67,7 +67,10 @@
 			<version>5.2.6.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

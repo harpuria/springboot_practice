@@ -34,14 +34,23 @@ public class IndexController {
     }
 
     @GetMapping("/posts/save")
-    public String postsSave(){
+    public String postsSave(@LoginUser SessionUser user, Model model){
+
+        if(user != null){
+            model.addAttribute("userName", user.getName());
+        }
+
         return "posts-save";
     }
 
     @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model){
+    public String postsUpdate(@PathVariable Long id, Model model, @LoginUser SessionUser user){
         PostsResponseDto dto = poststService.findById(id);
         model.addAttribute("post", dto);
+
+        if(user != null){
+            model.addAttribute("userName", user.getName());
+        }
 
         return "posts-update";
     }
