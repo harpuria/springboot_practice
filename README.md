@@ -1,6 +1,7 @@
 ## springboot_practice
 
 본 프로젝트는 공부 목적으로 스프링부트를 연습하는 프로젝트입니다.
+[(사이트 바로가기)](http://ec2-13-209-152-211.ap-northeast-2.compute.amazonaws.com:8080 "사이트 바로가기")
 
 [목표]
 + 아래 제반 기술에 대한 기본적인 이해 및 실습
@@ -16,6 +17,7 @@
 + Maven (3.6.3)
 + IntelliJ Community (2020.2.1)
 + H2 Database (1.4.197)
++ Maria DB (10.4.8)
 
 ***
 
@@ -36,3 +38,4 @@
 + AWS 계정 가입 (프리티어 2021. 09. 03 까지)
   + nuberus@naver.com / harpuria87@gmail.com (프리티어 종료)
 + p.309 application-real.properties 책과 다른 부분 [(이슈 확인)](https://github.com/jojoldu/freelec-springboot2-webservice/issues/158 "이슈 확인")
++ 리눅스에서 tail -f nohup.out 으로 실시간 로그 확인 가능.
