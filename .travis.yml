@@ -6,11 +6,17 @@ branches:
   only:
     - master
 
+
+
 # Travis CI Server Home
 cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.maven'
+
+# mvnw의 실행 권한이 없어서 부여해주어야 한다
+before_install:
+  - chmod +x mvnw
 
 script: "./mvnw clean package"
 
