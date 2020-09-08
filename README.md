@@ -3,12 +3,14 @@
 본 프로젝트는 공부 목적으로 스프링부트를 연습하는 프로젝트입니다.
 [(사이트 바로가기)](http://ec2-13-209-152-211.ap-northeast-2.compute.amazonaws.com:8080 "사이트 바로가기")
 
+***
+
 [목표]
 + 아래 제반 기술에 대한 기본적인 이해 및 실습
     + SpringBoot, JUnit4, JPA, Spring Security, Mustache
     + AWS EC2, S3, RDS, Travis CI 
 
-
+***
 
 [개발 환경]
 + JAVA (1.8, Zulu Open JDK)
