@@ -8,7 +8,7 @@
 [목표]
 + 아래 제반 기술에 대한 기본적인 이해 및 실습
     + SpringBoot, JUnit4, JPA, Spring Security, Mustache
-    + AWS EC2, S3, RDS, Travis CI 
+    + AWS EC2, S3, RDS, Travis CI, NginX
 
 ***
 

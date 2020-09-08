@@ -11,7 +11,8 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 
 import javax.servlet.http.HttpSession;
 
-// LoginUser 어노테이션을 사용하기 위한 클래스. HandlerMethodArgumentResolver 를 구현해줘야 한다.
+// LoginUser 어노테이션을 사용하기 위한 클래스.
+// 메소드 파라미터에 들어가는 어노테이션이기 때문에 HandlerMethodArgumentResolver 를 구현해줘야 한다.
 @RequiredArgsConstructor
 @Component
 public class LoginuserArgumentResolver implements HandlerMethodArgumentResolver {
