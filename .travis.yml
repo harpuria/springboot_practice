@@ -19,22 +19,6 @@ before_install:
 
 script: "./mvnw clean package"
 
-# S3 관련 설정 (생성한 jar 파일을 S3 로 보내기)
-before_deploy:
-  - zip -r freelec-springboot2-webservice
-  - mkdir -p deploy
-  - mv freelec-springboot2-webservice.zip deploy/freelec-springboot2-webservice.zip
-
-deploy:
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
-    bucket: freelec-springboot-build-yhh
-    region: ap-northeast-2
-    cleanup: true
-    acl: private
-    local_dir: deploy
-    #wait-until-deployed: true
 
 # CI 실행 완료시 메일로 알람
 notifications:
