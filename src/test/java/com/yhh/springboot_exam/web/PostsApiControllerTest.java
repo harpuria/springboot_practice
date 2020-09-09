@@ -102,7 +102,7 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
 
-    //@Test (변경된거 테스트 오류나서 일단 주석처리...)
+    //@Test (@LoginUser 추가된 내용으로 변견된거 테스트 오류나서 일단 주석처리...)
     //@WithMockUser(roles = "USER")
     public void posts_update() throws Exception{
         // given
@@ -125,12 +125,15 @@ public class PostsApiControllerTest {
 
         String url = "http://localhost:" + port + "/api/v1/posts/" + updateId;
 
+        /* MockMvc 적용 전
         HttpEntity<PostsUpdateRequestDto> requestEntity = new HttpEntity<>(requestDto);
+         */
 
         // when
         /* MockMvc 적용 전
         ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
          */
+
         mvc.perform(put(url)
         .contentType(MediaType.APPLICATION_JSON)
         .content(new ObjectMapper().writeValueAsString(requestDto)))
