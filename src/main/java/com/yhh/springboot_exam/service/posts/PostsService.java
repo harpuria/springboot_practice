@@ -1,5 +1,7 @@
 package com.yhh.springboot_exam.service.posts;
 
+import com.yhh.springboot_exam.config.auth.LoginUser;
+import com.yhh.springboot_exam.config.auth.dto.SessionUser;
 import com.yhh.springboot_exam.domain.posts.Posts;
 import com.yhh.springboot_exam.domain.posts.PostsRepository;
 import com.yhh.springboot_exam.web.dto.PostsListResponseDto;
@@ -23,9 +25,13 @@ public class PostsService {
     }
 
     @Transactional
-    public Long update(Long id, PostsSaveRequestDto requestDto) {
+    public Long update(Long id, PostsSaveRequestDto requestDto, SessionUser user) {
         Posts posts = postsRepository.findById(id)
                         .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다 id=" + id));
+
+        // 작성자 이름과 게시물 이름이 일치하지 않으면 바로 0 반환
+        if(user.getName() != posts.getAuthor())
+            return 0L;
 
         // 쿼리를 날리지 않고도 Entity 클래스인 Posts 객체의 값을 바꿔주는것만으로도 update 가 이루어진다.
         // 이를 JPA 의 영속성 컨텍스트라고 한다.

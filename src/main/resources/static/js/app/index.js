@@ -36,7 +36,7 @@ var index = {
     update : function(){
         var data = {
             title: $('#title').val(),
-            content: $('#content').val()
+            content: $('#content').val(),
         };
 
         var id = $('#id').val();
@@ -47,8 +47,12 @@ var index = {
             dataType: 'json',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
-        }).done(function(){
-            alert('글이 수정되었습니다');
+        }).done(function(resp){
+            if(resp == 0)
+                alert("작성자만 수정이 가능합니다");
+            else
+                alert("글이 수정되었습니다');
+
             window.location.href = '/';
         }).fail(function(error){
             alert(JSON.stringify(error));

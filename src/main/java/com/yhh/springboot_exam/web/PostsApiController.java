@@ -1,5 +1,7 @@
 package com.yhh.springboot_exam.web;
 
+import com.yhh.springboot_exam.config.auth.LoginUser;
+import com.yhh.springboot_exam.config.auth.dto.SessionUser;
 import com.yhh.springboot_exam.service.posts.PostsService;
 import com.yhh.springboot_exam.web.dto.PostsListResponseDto;
 import com.yhh.springboot_exam.web.dto.PostsResponseDto;
@@ -20,8 +22,8 @@ public class PostsApiController {
     }
 
     @PutMapping("/api/v1/posts/{id}")
-    public Long update(@PathVariable Long id, @RequestBody PostsSaveRequestDto requestDto){
-        return postsService.update(id, requestDto);
+    public Long update(@PathVariable Long id, @RequestBody PostsSaveRequestDto requestDto, @LoginUser SessionUser user){
+        return postsService.update(id, requestDto, user);
     }
 
     @GetMapping("/api/v1/posts/{id}")
