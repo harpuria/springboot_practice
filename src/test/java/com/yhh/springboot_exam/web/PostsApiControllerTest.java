@@ -102,8 +102,8 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getContent()).isEqualTo(content);
     }
 
-    //@Test (@LoginUser 추가된 내용으로 변견된거 테스트 오류나서 일단 주석처리...)
-    //@WithMockUser(roles = "USER")
+    @Test
+    @WithMockUser(roles = "USER")
     public void posts_update() throws Exception{
         // given
         Posts savedPosts = postsRepository.save(Posts.builder()
