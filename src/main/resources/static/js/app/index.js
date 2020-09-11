@@ -48,11 +48,7 @@ var index = {
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(data)
         }).done(function(resp){
-            if(resp == 0)
-                alert("작성자만 수정이 가능합니다");
-            else
-                alert("글이 수정되었습니다');
-
+            alert("글이 수정되었습니다");
             window.location.href = '/';
         }).fail(function(error){
             alert(JSON.stringify(error));
