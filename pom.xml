@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.yhh</groupId>
 	<artifactId>springboot_exam</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>springboot_exam</name>
 	<description>yhh's springboot exam (jdk8, boot 2.3.3, maven)</description>
 
