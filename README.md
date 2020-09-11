@@ -39,7 +39,7 @@
   + MediaType.APPLICATION_JSON 로 대체하시면 됩니다.
 + AWS 계정 가입 (프리티어 2021. 09. 03 까지)
   + nuberus@naver.com / harpuria87@gmail.com (프리티어 종료)
-+ p.100 application.properties (MySQL5InnoDBDialect Deprecated) [(이슈 확인)](https://github.com/jojoldu/freelec-springboot2-webservice/issues/158 "이슈 확인")
-  + p.309 application-real.properties (위와 동일한 사항)
++ p.100 application.properties / p.309 application-real.properties [(이슈 확인)](https://github.com/jojoldu/freelec-springboot2-webservice/issues/158 "이슈 확인")
+  + MySQL5InnoDBDialect Deprecated 되어서 MySQL55Dialect 로 변경하였다.(이거 기본 엔진이 InnoDB)
 + 리눅스에서 tail -f nohup.out 으로 실시간 로그 확인 가능.
 + Travis CI Maven 설정 관련 참고 블로그 [(참조 블로그)](https://velog.io/@junwoo4690/Travis-CI%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-Maven-SpringBoot%EC%97%90-CI-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0 "Travis CI Maven 설정")
