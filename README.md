@@ -1,7 +1,7 @@
 ## springboot_practice
 
 본 프로젝트는 공부 목적으로 스프링부트를 연습하는 프로젝트입니다.
-[(사이트 바로가기)](http://ec2-13-209-152-211.ap-northeast-2.compute.amazonaws.com:8080 "사이트 바로가기")
+[(사이트 바로가기)](http://ec2-13-209-152-211.ap-northeast-2.compute.amazonaws.com "사이트 바로가기")
 
 ***
 
