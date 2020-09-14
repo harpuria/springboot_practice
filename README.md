@@ -43,3 +43,4 @@
   + MySQL5InnoDBDialect Deprecated 되어서 MySQL55Dialect 로 변경하였다.(기본 엔진 InnoDB)
 + 리눅스에서 tail -f nohup.out 으로 실시간 로그 확인 가능.
 + Travis CI Maven 설정 관련 참고 블로그 [(참조 블로그)](https://velog.io/@junwoo4690/Travis-CI%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%B4-Maven-SpringBoot%EC%97%90-CI-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0 "Travis CI Maven 설정")
++ Maven 환경에서 버전에 날짜와 시간 넣기 [(참조 블로그)](https://blog.silentsoft.org/archives/18 "Maven 환경에서 버전에 날짜와 시간 넣기")

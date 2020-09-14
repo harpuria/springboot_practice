@@ -10,12 +10,16 @@
 	</parent>
 	<groupId>com.yhh</groupId>
 	<artifactId>springboot_exam</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.1-SNAPSHOT-${buildtime}</version> <!-- 버전에 날짜와 시간 추가 -->
 	<name>springboot_exam</name>
 	<description>yhh's springboot exam (jdk8, boot 2.3.3, maven)</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+
+		<!-- 날짜와 시간 포맷 설정 -->
+		<maven.build.timestamp.format>yyyyMMdd_HHmm</maven.build.timestamp.format>
+		<buildtime>${maven.build.timestamp}</buildtime>
 	</properties>
 
 	<dependencies>
